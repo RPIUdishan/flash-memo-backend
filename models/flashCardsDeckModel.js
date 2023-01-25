@@ -1,4 +1,5 @@
 import mongoose from 'mongoose';
+
 const { Schema } = mongoose;
 
 const flashCardsDeckSchema = new Schema({
@@ -21,4 +22,4 @@ const flashCardsDeckSchema = new Schema({
 
 });
 
-export default model("FlashCardsDeck", flashCardsDeckSchema)
+export default mongoose.model("FlashCardsDeck", flashCardsDeckSchema)

@@ -4,12 +4,14 @@ import mongoose from "mongoose";
 // import cookieParser from "cookie-parser";
 // import cors from "cors"
 
+import cardDecksRoute from "./routes/flashCardDeckRoute.js"
+
 const app = express();
 
 dotenv.config();
 
 //db connection
-app.listen(process.env.PORT, () => {
+app.listen(5000, () => {
     console.log("Connected to the Backend...")
     connect()
 });
@@ -33,3 +35,7 @@ mongoose.connection.on('connected', () => {
 mongoose.connection.on('disconnected', () => {
     console.log("Disconnected")
 })
+
+app.use(express.json())
+
+app.use("/api/flashCardsDeck", cardDecksRoute)
