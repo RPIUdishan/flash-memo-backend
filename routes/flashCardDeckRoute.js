@@ -1,8 +1,10 @@
 import express from "express";
-import { create } from "../controllers/flashCardDeckController.js";
+import { create, getAll } from "../controllers/flashCardDeckController.js";
 
 const router = express.Router()
 
 router.post('/create', create)
+
+router.get('/', getAll)
 
 export default router;

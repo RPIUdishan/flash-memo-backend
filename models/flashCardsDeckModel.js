@@ -22,4 +22,4 @@ const flashCardsDeckSchema = new Schema({
 
 });
 
-export default mongoose.model("FlashCardsDeck", flashCardsDeckSchema)
+export default mongoose.model("flash_card_decks", flashCardsDeckSchema)
