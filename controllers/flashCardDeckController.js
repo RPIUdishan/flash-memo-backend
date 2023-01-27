@@ -12,9 +12,12 @@ export const create = async (req, res) => {
 }
 
 export const getAll = async (req, res) => {
+    console.log("Worked")
     try{
         const savedCardDecks = await FlashCardDeck.find()
         res.status(200).json(savedCardDecks)
+        // JSON.stringify(responseData)
+        // res.status(200).json(savedCardDecks)
     }catch(err){
         console.log(err)
     }

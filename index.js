@@ -1,8 +1,8 @@
 import express  from "express";
 import dotenv from "dotenv"
 import mongoose from "mongoose";
+import cors from "cors"
 // import cookieParser from "cookie-parser";
-// import cors from "cors"
 
 import cardDecksRoute from "./routes/flashCardDeckRoute.js"
 
@@ -35,7 +35,7 @@ mongoose.connection.on('connected', () => {
 mongoose.connection.on('disconnected', () => {
     console.log("Disconnected")
 })
-
+app.use(cors())
 app.use(express.json())
 
 app.use("/api/flashCardsDeck", cardDecksRoute)
