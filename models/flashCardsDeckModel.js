@@ -17,7 +17,6 @@ const flashCardsDeckSchema = new Schema({
   },
   noOfCards: {
     type: Number,
-    required: true 
   }
 
 });
