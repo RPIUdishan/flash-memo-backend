@@ -1,7 +1,7 @@
 import FlashCardDeck from '../models/flashCardsDeckModel.js'
 
 export const create = async (req, res) => {
-    console.log("Working",req)
+    console.log("Working", req)
     const flashCardDeck = new FlashCardDeck(req.body)
 
     try {
@@ -22,11 +22,14 @@ export const getAll = async (req, res) => {
     }
 }
 
-export const getCardsByCardDeckId = async = (req, res) => {
-    try{
-        
+export const getCardsByCardDeckId = async (req, res) => {
+    try {
+        const cardDeckId = req.params.id;
+
+        const cardDeck = await FlashCardDeck.findById(cardDeckId)
+        res.status(200).json(cardDeck);
     }
-    catch(err){
+    catch (err) {
         console.log(err);
     }
 }
