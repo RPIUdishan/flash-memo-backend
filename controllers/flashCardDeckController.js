@@ -21,3 +21,12 @@ export const getAll = async (req, res) => {
         console.log(err)
     }
 }
+
+export const getCardsByCardDeckId = async = (req, res) => {
+    try{
+        
+    }
+    catch(err){
+        console.log(err);
+    }
+}

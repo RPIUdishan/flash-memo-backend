@@ -12,7 +12,7 @@ dotenv.config();
 
 //db connection
 app.listen(5000, () => {
-    console.log("Connected to the Backend...")
+    console.log("Connected to the Backend")
     connect()
 });
 
