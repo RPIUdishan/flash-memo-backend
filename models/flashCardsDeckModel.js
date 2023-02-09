@@ -15,9 +15,16 @@ const flashCardsDeckSchema = new Schema({
     type: String,
     required: true
   },
+  cards: {
+    type: Array,
+    default: []
+  },
   noOfCards: {
     type: Number,
-  }
+    default: function () {
+      return this.cards.length;
+    }
+  },
 },
   {
     timestamps: true
