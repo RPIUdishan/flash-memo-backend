@@ -33,4 +33,4 @@ const flashCardSchema = new Schema({
     }
 );
 
-export default mongoose.model("flash_cards", flashCardsDeckSchema)
+export default mongoose.model("flash_cards", flashCardSchema)

@@ -5,6 +5,7 @@ import cors from "cors"
 // import cookieParser from "cookie-parser";
 
 import cardDecksRoute from "./routes/flashCardDeckRoute.js"
+import flashCardRoute from "./routes/flashCardsRoute.js"
 
 const app = express();
 
@@ -39,3 +40,4 @@ app.use(cors())
 app.use(express.json())
 
 app.use("/api/flashCardsDeck", cardDecksRoute)
+app.use("/api/flashCards", flashCardRoute)
